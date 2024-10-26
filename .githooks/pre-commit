@@ -1,0 +1,3 @@
+# Run code analysis before commit
+echo -e "--- ESLint ---"
+TIMING=1 yarn lint --fix
