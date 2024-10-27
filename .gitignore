@@ -34,3 +34,5 @@ vite.config.mjs.timestamp-*
 !.yarn/versions
 
 .eslintcache
+
+*storybook.log

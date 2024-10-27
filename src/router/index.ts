@@ -2,16 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const baseRoutes = [
   {
-    path: "/",
-    redirect: { name: "home" },
+    path: '/',
+    redirect: { name: 'home' },
   },
   {
-    path: "/weather-forecast",
-    name: "home",
-    component: () => import("@/views/WeatherForecast.vue"),
+    path: '/weather-forecast',
+    name: 'home',
+    component: () => import('@/views/WeatherForecast.vue'),
     meta: {
-      title: "Weather Forecast",
-      darkBg: true,
+      title: 'Weather Forecast',
+      hasSidebar: true,
     },
   },
 ]
