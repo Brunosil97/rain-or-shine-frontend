@@ -134,3 +134,5 @@ yarn test:coverage
 - Incorporate Vuetify theme toggling for custom light & dark mode, additionally incorporate browser intergration.
 
 - Expand on Vitest tests to utilise Pinia state management and test store logic
+
+- Expand on E2E testing with incorporating Playwright
