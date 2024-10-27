@@ -130,6 +130,10 @@ yarn test:coverage
 [Error](./src/assets/error-handling.png)
 
 ## TODO
-Incorporate `**SearchBox.vue**` Component: Implement functionality in the `**SearchBox.vue**` component to utilise `**CitiesAPI**`. This integration will allow users to search for cities dynamically, enhancing the application’s interactivity and user experience for finding weather forecasts across various locations.
+- Incorporate `**SearchBox.vue**` Component: Implement functionality in the `**SearchBox.vue**` component to utilise `**CitiesAPI**`. This integration will allow users to search for cities dynamically, enhancing the application’s interactivity and user experience for finding weather forecasts across various locations.
 
-Incorporate `**vue-i18n**` for translations of string texts.
+- Incorporate `**vue-i18n**` for translations of string texts.
+
+- Incorporate Vuetify theme toggling for custom light & dark mode, additionally incorporate browser intergration.
+
+- Expand on Vitest tests to utilise Pinia state management and test store logic
