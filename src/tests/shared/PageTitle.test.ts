@@ -6,7 +6,7 @@ describe('PageTitle.vue', () => {
   it('should not apply underline when showUnderline is false', async () => {
     const wrapper = mount(PageTitle, {
       props: {
-        title: "London Calling",
+        title: 'London Calling',
       },
     })
 
@@ -19,7 +19,7 @@ describe('PageTitle.vue', () => {
   it('should animate title on mount', async () => {
     const wrapper = mount(PageTitle, {
       props: {
-        title: "London is not calling",
+        title: 'London is not calling',
       },
     })
 

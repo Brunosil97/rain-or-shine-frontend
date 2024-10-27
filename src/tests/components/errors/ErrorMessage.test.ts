@@ -1,6 +1,6 @@
 // tests/components/ErrorMessage.test.ts
 import { mount } from '@vue/test-utils'
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import ErrorMessage from '@/components/errors/ErrorMessage.vue'
 
 describe('ErrorMessage.vue', () => {
@@ -21,7 +21,7 @@ describe('ErrorMessage.vue', () => {
     })
 
     expect(wrapper.text()).toContain('Test Error Message')
-    expect(wrapper.text()).toContain("Oops! Something has gone wrong")
+    expect(wrapper.text()).toContain('Oops! Something has gone wrong')
   })
 
   it('shows retry button if retry prop is true', () => {

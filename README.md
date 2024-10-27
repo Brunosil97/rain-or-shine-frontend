@@ -114,20 +114,17 @@ yarn test:coverage
 ## UI
 
 - Dashboard:
+  - [Dashboard](./src/assets/dashboard.png)
 
-[Dashboard](./src/assets/dashboard.png)
-
-[Dashboard with Slider](./src/assets/dashboard-slider.png)
+  - [Dashboard with Slider](./src/assets/dashboard-slider.png)
 
 - Mobile:
+  - [Mobile](./src/assets/mobile.png)
 
-[Mobile](./src/assets/mobile.png)
-
-[Mobile Cities](./src/assets/mobile-cities.png)
+  -  [Mobile Cities](./src/assets/mobile-cities.png)
 
 - Error:
-
-[Error](./src/assets/error-handling.png)
+  - [Error](./src/assets/error-handling.png)
 
 ## TODO
 - Incorporate `**SearchBox.vue**` Component: Implement functionality in the `**SearchBox.vue**` component to utilise `**CitiesAPI**`. This integration will allow users to search for cities dynamically, enhancing the application’s interactivity and user experience for finding weather forecasts across various locations.
