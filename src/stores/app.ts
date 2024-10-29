@@ -27,6 +27,19 @@ export const useAppStore = defineStore('app', {
     citiesData: [],
   }),
   actions: {
+    /**
+     * Fetches city data from the specified API endpoint.
+     * 
+     * This function initiates a fetch request to retrieve city data and updates
+     * the component state with the results. During the fetch process, it sets 
+     * the `isLoading` state to true to indicate loading, and reverts it to false 
+     * once complete. If an error occurs, it updates the `isError` state with the 
+     * error message.
+     *
+     * @async
+     * @function fetchCities
+     * @returns {Promise<void>}
+     */
     async fetchCities () {
       this.isLoading = true
       this.isError = false
@@ -61,6 +74,22 @@ export const useForecastStore = defineStore('forecast', {
     },
   },
   actions: {
+    /**
+     * Fetches weather forecast data for a specific city from the backend API.
+     * 
+     * This function takes a city name as a parameter, makes a request 
+     * to the backend API to retrieve forecast data, and updates component states 
+     * based on the response. If an error occurs or the response is unsuccessful, 
+     * it updates `forecastError` with the corresponding error message.
+     * 
+     * During the fetch process, it sets `loadingForecast` to true and reverts it to false
+     * upon completion. Successful data is stored in `cityForecast`.
+     *
+     * @async
+     * @function fetchCityForecast
+     * @param {string} city - The name of the city for which to fetch forecast data.
+     * @returns {Promise<void>}
+     */
     async fetchCityForecast (city: string) {
       this.city = city
       this.loadingForecast = true
