@@ -100,13 +100,13 @@ export const useForecastStore = defineStore('forecast', {
         const data = await response.json()
         // Check if the HTTP response is not OK and handle as an error
         if (!response.ok) {
-          const errorMessage = (await response.text()) || 'Failed to fetch forecast data from backend';
+          const errorMessage = (await response.text()) || 'Failed to fetch forecast data from backend'
           this.forecastError = errorMessage
         }
 
         // Check if the API response contains a logical error, even when HTTP status is OK
-        if (data?.cityForecast?.error) {
-          this.forecastError = data.cityForecast.error
+        if (data?.error) {
+          this.forecastError = data.error
         }
 
         if (response.ok) {
