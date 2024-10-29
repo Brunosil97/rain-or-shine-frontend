@@ -8,7 +8,7 @@ export function useWeatherIcon () {
         return { icon: 'mdi-weather-partly-cloudy', colour: 'accent' }
       case 'broken clouds':
       case 'overcast clouds':
-        return { icon: 'mdi-weather-cloudy', colour: 'gray' }
+        return { icon: 'mdi-weather-cloudy', colour: 'grey' }
       case 'light rain':
       case 'drizzle':
         return { icon: 'mdi-weather-partly-rainy', colour: 'blue' }
@@ -34,9 +34,9 @@ export function useWeatherIcon () {
       case 'fog':
       case 'mist':
       case 'haze':
-        return { icon: 'mdi-weather-fog', colour: 'gray-darken-1' }
+        return { icon: 'mdi-weather-fog', colour: 'grey-darken-1' }
       default:
-        return { icon: 'mdi-weather-cloudy', colour: 'gray' }
+        return { icon: 'mdi-weather-cloudy', colour: 'grey' }
     }
   }
 
