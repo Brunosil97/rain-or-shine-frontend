@@ -98,10 +98,10 @@ export const useForecastStore = defineStore('forecast', {
       try {
         const response = await fetch(`http://localhost:8000/weather?city=${city}`)
         const data = await response.json()
-        if (!response.ok) {
-          // If response is not OK, try to extract error message as plain text
-          const errorMessage = await response.text()
-          this.forecastError = errorMessage || 'Failed to fetch forecast data from backend'
+        if (!response.ok || data?.cityForecast?.error) {
+          // If response is not OK, try to extract error message as plain text or use API error
+          const errorMessage = (await response.text()) || data?.cityForecast?.error || 'Failed to fetch forecast data';
+          this.forecastError = errorMessage;
           return
         }
 
