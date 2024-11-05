@@ -72,6 +72,10 @@
 </template>
 
 <script lang="ts" setup>
+  interface ErrorObject {
+    error: string | Error | object
+  }
+
   import { computed, onMounted, ref, watch } from 'vue'
   import dayjs from 'dayjs'
   import utc from 'dayjs/plugin/utc'
@@ -79,7 +83,7 @@
   dayjs.extend(utc)
 
   const props = defineProps<{
-    error?: string | Error | object;
+    error?: ErrorObject
     retry?: boolean;
     snackbar?: boolean;
   }>()
@@ -101,7 +105,7 @@
   // Watchers
   watch(
     () => props.error,
-    (newValue, oldValue) => {
+    (newValue: ErrorObject, oldValue: ErrorObject) => {
       if (newValue !== oldValue && newValue !== undefined) {
         showSnackbar.value = true
       }
